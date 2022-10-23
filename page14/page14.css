@@ -18,9 +18,8 @@ body {
   background: #000;
   color: #3df1f1;
   font: 1em Dosis, sans-serif;
-  height: 100vh;
-  line-height: 1.5;
-  perspective: 40em
+  height: 80vh;
+
 }
 
 .preloader {
