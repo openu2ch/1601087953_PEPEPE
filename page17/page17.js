@@ -1,1 +1,1 @@
-function pass(){let txt=document.getElementById("pass16");txt.innerHTML="PEPEPE <br>⍥⃞&nbsp;&nbsp;&nbsp;⍥⃞&nbsp;&nbsp;&nbsp;⍥⃞ <br>PASS 16 = 0 "};
+function pass(){let txt=document.getElementById("pass16");txt.innerHTML="PEPEPE <br>&nbsp;⍥⃞&nbsp;<br>PASS 16 = 0 "};
