@@ -1,0 +1,1 @@
+function pass(){let txt=document.getElementById("pass");if(txt!==null){txt.innerHTML=" PASS 18 = 0 "}};

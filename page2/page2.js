@@ -1,0 +1,1 @@
+function matchPass(){var e=document.forms.pass.elements.inpass.value,t="##4150484254480000PH";e==t?location.href="https://writening.net/page?WyRv6a":location.href="https://open.open2ch.net/1666530675/"}

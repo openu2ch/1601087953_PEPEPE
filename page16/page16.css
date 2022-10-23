@@ -1,0 +1,193 @@
+.pepepe{
+  text-align: center;
+  width: 100%;
+  color:white;
+  font-size:5vw;
+  position:  absolute;        /* 要素の配置方法を指定 */
+  top: -100px;                  /* 上からの位置指定 */ 
+}
+
+
+
+body {
+  display: grid;
+  grid-template-rows: 1fr 10rem auto;
+  grid-template-areas: "main" "." "footer";
+  overflow-x: hidden;
+  min-height: 110vh;
+  font-family: "Open Sans", sans-serif;
+  background: #EB5757;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #EB5757,#000000);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #EB5757,#000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+body .footer {
+  z-index: 1;
+  --footer-background:#7a1722;
+  display: grid;
+  position: relative;
+  grid-area: footer;
+  min-height: 12rem;
+}
+body .footer .bubbles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1rem;
+  background: var(--footer-background);
+  filter: url("#blob");
+}
+body .footer .bubbles .bubble {
+  position: absolute;
+  left: var(--position, 50%);
+  background: var(--footer-background);
+  border-radius: 100%;
+  -webkit-animation: bubble-size var(--time, 4s) ease-in infinite var(--delay, 0s), bubble-move var(--time, 4s) ease-in infinite var(--delay, 0s);
+          animation: bubble-size var(--time, 4s) ease-in infinite var(--delay, 0s), bubble-move var(--time, 4s) ease-in infinite var(--delay, 0s);
+  transform: translate(-50%, 100%);
+}
+body .footer .content {
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-gap: 4rem;
+  padding: 2rem;
+  background: var(--footer-background);
+}
+body .footer .content a, body .footer .content p {
+  color: #F5F7FA;
+  text-decoration: none;
+}
+body .footer .content b {
+  color: white;
+}
+body .footer .content p {
+  margin: 0;
+  font-size: 0.75rem;
+}
+body .footer .content > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+body .footer .content > div > div {
+  margin: 0.25rem 0;
+}
+body .footer .content > div > div > * {
+  margin-right: 0.5rem;
+}
+body .footer .content > div .image {
+  align-self: center;
+  width: 4rem;
+  height: 4rem;
+  margin: 0.25rem 0;
+  background-size: cover;
+  background-position: center;
+}
+
+@-webkit-keyframes bubble-size {
+  0%, 75% {
+    width: var(--size, 4rem);
+    height: var(--size, 4rem);
+  }
+  100% {
+    width: 0rem;
+    height: 0rem;
+  }
+}
+
+@keyframes bubble-size {
+  0%, 75% {
+    width: var(--size, 4rem);
+    height: var(--size, 4rem);
+  }
+  100% {
+    width: 0rem;
+    height: 0rem;
+  }
+}
+@-webkit-keyframes bubble-move {
+  0% {
+    bottom: -4rem;
+  }
+  100% {
+    bottom: var(--distance, 10rem);
+  }
+}
+@keyframes bubble-move {
+  0% {
+    bottom: -4rem;
+  }
+  100% {
+    bottom: var(--distance, 10rem);
+  }
+}
+
+
+.swing-outer {
+    zoom: 1;
+}
+
+.swing-outer:before, .swing-outer:after {
+    content: "";
+    display: table;
+}
+
+.swing-outer:after {
+    clear: both;
+}
+
+.swing {
+    animation: swing linear 4s infinite;
+}
+
+.swing img {
+    border: 5px solid #f8f8f8;
+    z-index: 2;
+    display: block;
+    width: 200px;
+}
+
+.swing:after {
+    content: '';
+
+    top: -10px;
+    z-index: 0;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    border-bottom: none;
+    border-right: none;
+    transform: rotate(45deg);
+    position: absolute;
+}
+
+.swing:before {
+    content: '';
+    top: -14px;
+    z-index: 5;
+    left: 26.5%;
+    width: 5px;
+    border-radius: 50% 50%;
+    background: #000;
+    height: 5px;
+    position: absolute;
+}
+
+@keyframes swing {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(10deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    75% {
+        transform: rotate(-10deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
