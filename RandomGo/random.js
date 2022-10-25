@@ -1021,7 +1021,16 @@ var mylink = new Array(
 "https://open.open2ch.net/1601530791/",
 "https://open.open2ch.net/1601466773/",
 "https://open.open2ch.net/1600933817/",
-"https://open.open2ch.net/1666530675/"
+"https://open.open2ch.net/1666530675/",
+"https://open.open2ch.net/1666534316/",
+"https://open.open2ch.net/1665900485/",
+"https://open.open2ch.net/1665804617/",
+"https://open.open2ch.net/1666465206/",
+"https://open.open2ch.net/1666072643/",
+
+
+
+
       );
 window.onload = function random_jump() {
         var i = Math.floor(Math.random() * mylink.length);
